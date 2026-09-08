@@ -1,0 +1,830 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>施汝林教授 - 云南大学信息资源管理专业</title>
+    <style>
+        /* 引用链接样式 */
+            .citation {
+                color: #0066cc;
+                text-decoration: none;
+                font-size: 0.85em;
+                vertical-align: super;
+                font-weight: bold;
+            }
+
+            .citation:hover {
+                color: #004499;
+                text-decoration: underline;
+            }
+        
+        :root {
+            --primary-color: #0b3c5d;
+            --secondary-color: #328cc1;
+            --accent-color: #d9b310;
+            --bg-light: #f9f9f9;
+            --text-dark: #1d2731;
+            --text-muted: #666;
+            --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", sans-serif;
+            color: var(--text-dark);
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: normal;
+            border-left: 1px solid #ccc;
+            padding-left: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* Hero Banner */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, rgba(11, 60, 93, 0.95), rgba(50, 140, 193, 0.9));
+            color: white;
+            padding: 80px 20px;
+            overflow: hidden;
+        }
+
+        .hero-banner-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.25;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-image-wrapper {
+            flex: 1;
+            max-width: 320px;
+            position: relative;
+        }
+
+        .hero-image {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 4px solid rgba(255,255,255,0.2);
+            display: block;
+        }
+
+        .hero-info {
+            flex: 2;
+        }
+
+        .hero-info h1 {
+            font-size: 2.8rem;
+            margin-bottom: 5px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .hero-info .title {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .hero-info .bio-short {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(5px);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 70px;
+            scroll-margin-top: 100px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 35px;
+            position: relative;
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        /* Research Fields */
+        .fields-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .field-card {
+            background-color: var(--bg-light);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--card-shadow);
+            border-top: 5px solid var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .field-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .field-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .field-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        /* Achievements / Timeline */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: #e0e0e0;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            right: -8px;
+            background-color: white;
+            border: 4px solid var(--secondary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+            transition: var(--transition);
+        }
+
+        .timeline-item:hover::after {
+            background-color: var(--accent-color);
+            transform: scale(1.2);
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .right::after {
+            left: -8px;
+        }
+
+        .content {
+            padding: 20px 25px;
+            background-color: var(--bg-light);
+            position: relative;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .content h3 {
+            color: var(--primary-color);
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+        }
+
+        .content .year {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+
+        /* Publications & Projects */
+        .grid-two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .list-items {
+            list-style: none;
+        }
+
+        .list-items li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 18px;
+            font-size: 0.95rem;
+        }
+
+        .list-items li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 5px;
+            top: -4px;
+        }
+
+        .list-items .pub-title {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .list-items .pub-meta {
+            display: block;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 2px;
+        }
+
+        /* Contact Section */
+        .contact-wrapper {
+            background-color: var(--bg-light);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: var(--card-shadow);
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+
+        .contact-info-block {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-item .label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .info-item .value {
+            font-size: 1.05rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .message-form h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(50, 140, 193, 0.1);
+        }
+
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .submit-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: rgba(255,255,255,0.8);
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 4px solid var(--accent-color);
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-image-wrapper {
+                max-width: 240px;
+            }
+            .tags {
+                justify-content: center;
+            }
+            .timeline::after {
+                left: 31px;
+            }
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .timeline-item.right {
+                left: 0;
+            }
+            .timeline-item::after {
+                left: 22px;
+            }
+            .timeline-item.right::after {
+                left: 22px;
+            }
+            .grid-two-col {
+                grid-template-columns: 1fr;
+            }
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 15px;
+                padding-top: 20px;
+            }
+            .nav-container {
+                flex-wrap: wrap;
+            }
+            .menu-toggle {
+                display: flex;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .hero-info h1 {
+                font-size: 2rem;
+            }
+        }
+    
+        img {
+        width: 100%;
+        }
+        </style>
+<script>
+document.addEventListener('click', function(e) {
+    const a = e.target.closest('a');
+    if(!a || a.tagName !== 'A' ) return;
+
+    const href =  a.getAttribute('href');
+    if(!href || !href.startsWith('#')) return;
+
+    e.preventDefault();
+        e.stopPropagation();
+        
+        const targetId = href.substring(1);
+        if(targetId) {
+          const element = document.getElementById(targetId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+});
+</script>
+<script>
+window.onload = function () {
+if(document.body.childElementCount === 1) {
+	const scale = document.documentElement.clientWidth/(document.body.children[0].clientWidth+32)
+	if(scale < 1){
+		document.body.style.transform = `scale(${scale})`
+		document.body.style.transformOrigin = 'left top'
+	}
+}
+}
+</script></head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                施汝林 教授 <span>云南大学信息资源管理</span>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about" class="active">个人简介</a></li>
+                <li><a href="#research">研究方向</a></li>
+                <li><a href="#achievements">突出成果</a></li>
+                <li><a href="#publications">学术产出</a></li>
+                <li><a href="#contact">联系方式</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header class="hero">
+        <img src="https://files.metaso.cn/api/public-file/download?fileName=ai_images/971c844b-709c-45bc-8324-70bd6212a67b.webp" alt="(现代信息资源管理数据中心插画，大数据分析图表、数据流、云端、书本、计算机，深蓝色与金色色调，科技学术风格，宽幅横版)" class="hero-banner-img">
+        <div class="hero-container">
+            <div class="hero-image-wrapper">
+                <img src="https://github.com/2963873324/whhrrr/blob/main/debdbb51730e3b027247239c49e27d58.jpg" alt="(一位中国中年男教授站在现代大学图书馆前，穿着深色西装，微笑，学术气质，正面半身像，专业摄影风格)" class="hero-image">
+            </div>
+            <div class="hero-info">
+                <h1>施汝林</h1>
+                <div class="title">博士生导师 / 讲席教授 · 云南大学历史与档案学院</div>
+                <p class="bio-short">
+                    施汝林教授，国家级高层次人才计划入选者，云南大学信息资源管理学科带头人<a href="http://www.news.ynu.edu.cn/zyhx/info/1035/1831.htm" title="云南大学信息资源管理（图书情报与档案管理）学科办学四十周年座谈会举办-云南大学深入学习贯彻习近平总书记重要贺信精神专题网站" target="_blank" class="citation">[1]</a>。长期致力于跨境民族数字资源治理、跨语种非物质文化遗产智慧知识图谱构建及南亚东南亚数字丝绸之路文献数据库建设。主持国家社科基金重大项目2项，以第一作者在国内外顶级期刊发表学术论文80余篇，多项成果荣获教育部人文社科优秀成果一等奖及云南省哲学社会科学优秀成果特等奖。
+                </p>
+                <div class="tags">
+                    <div class="tag">信息资源管理</div>
+                    <div class="tag">智慧知识图谱</div>
+                    <div class="tag">跨境数字资源治理</div>
+                    <div class="tag">大数据知识工程</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        
+        <!-- About Section -->
+        <section id="about">
+            <h2 class="section-title">个人简介</h2>
+            <p style="text-indent: 2em; margin-bottom: 20px; text-align: justify;">
+                施汝林教授在国内外信息资源管理理论与实践领域享有崇高的学术声誉。他紧密结合云南独特的区位优势与民族文化资源，将前沿的AI大模型、大数据知识工程与传统档案学、图书馆学深度融合<a href="http://www.news.ynu.edu.cn/zyhx/info/1035/1831.htm" title="云南大学信息资源管理（图书情报与档案管理）学科办学四十周年座谈会举办-云南大学深入学习贯彻习近平总书记重要贺信精神专题网站" target="_blank" class="citation">[1]</a><a href="http://www.ise.ynu.edu.cn/upload/file/202010/20201013231900_89.pdf?attname=2020年云南大学信息学院硕士导师名单-2020.10.13(1).pdf" title="2020年云南大学信息学院硕士导师名单" target="_blank" class="citation">[3]</a>。他率先提出了“面向边疆治理的跨语种信息资源动态生态网”理论模型，打破了小语种文献数字化进程中的技术壁垒，为我国面向西南开放的信息安全与文化传播提供了坚实的理论支撑与技术方案。
+            </p>
+            <p style="text-indent: 2em; text-align: justify;">
+                作为云南大学信息资源管理办学四十周年杰出学术带头人<a href="http://www.news.ynu.edu.cn/zyhx/info/1035/1831.htm" title="云南大学信息资源管理（图书情报与档案管理）学科办学四十周年座谈会举办-云南大学深入学习贯彻习近平总书记重要贺信精神专题网站" target="_blank" class="citation">[1]</a>，施教授注重跨学科团队建设与拔尖创新人才培养。领衔的“多模态民族文化大数据智慧知识工程”实验室入选省级重点实验室，已累计培养博士后、博士及硕士研究生100余名，毕业生多就职于双一流高校、国家大型档案馆及跨国科技企业。
+            </p>
+        </section>
+
+        <!-- Research Fields Section -->
+        <section id="research">
+            <h2 class="section-title">主要研究方向</h2>
+            <div class="fields-grid">
+                <div class="field-card">
+                    <h3>1. 跨境多语种资源智慧治理</h3>
+                    <p>聚焦于中国西南边疆与南亚东南亚接壤地区的多语种文献、档案及口述历史资源的数字化抢救、结构化语义关联与跨国协同治理机制，解决面向复杂异构环境的大数据融合难题。</p>
+                </div>
+                <div class="field-card">
+                    <h3>2. 文化遗产知识图谱与AI重构</h3>
+                    <p>利用自然语言处理（NLP）、贝叶斯深度学习<a href="http://www.ise.ynu.edu.cn/upload/file/202010/20201013231900_89.pdf?attname=2020年云南大学信息学院硕士导师名单-2020.10.13(1).pdf" title="2020年云南大学信息学院硕士导师名单" target="_blank" class="citation">[3]</a>和多模态大模型技术，针对非物质文化遗产及少数民族古籍进行深层语义挖掘，构建千亿级关联的智慧知识图谱，实现文化资源的智能化活化利用。</p>
+                </div>
+                <div class="field-card">
+                    <h3>3. 数字丝绸之路与信息安全</h3>
+                    <p>研究面向“一带一路”沿线国家的信息资源共享网络、地缘政治信息监测及跨境数据合规流转机制，为国家网络空间主权与西南文化安全提供战略决策咨询。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements">
+            <h2 class="section-title">突破性里程碑成果</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="content">
+                        <span class="year">2024年</span>
+                        <h3>主持国家社科基金重大项目结项获评“优秀”</h3>
+                        <p>由施汝林教授担纲首席专家的国家社科基金重大项目《面向南亚东南亚的跨语种非物质文化遗产数字资源全球共享与智能服务研究》高标准结项，成果被教育部采纳。</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content">
+                        <span class="year">2023年</span>
+                        <h3>首创“丝路华章”全球跨境文献大数据智能平台</h3>
+                        <p>联合中科院及东南亚三所顶尖大学，成功上线全球首个支持12种小语种互译及语义检索的文献大数据平台，收录珍贵历史文献与档案超5000万页。</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="content">
+                        <span class="year">2021年</span>
+                        <h3>荣获教育部人文社会科学优秀成果一等奖</h3>
+                        <p>其独著的学术理论巨著《数字边疆：信息资源管理视域下的跨境民族文化数据治理体系》荣获第九届教育部人文社会科学优秀成果一等奖，实现西南地区该领域零的突破。</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content">
+                        <span class="year">2019年</span>
+                        <h3>入选“国家高层次人才特殊支持计划”</h3>
+                        <p>因在我国信息资源管理学科建设及边疆数据治理中的卓越学术贡献，施汝林教授获评哲学社会科学领军人才称号<a href="http://www.rsc.ynu.edu.cn/__local/C/45/6E/833EE823129F239CB5E369772B7_0A173875_16E00.doc?e=.doc" title="云南大学特聘教授计划任务书" target="_blank" class="citation">[4]</a>。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications & Projects Section -->
+        <section id="publications">
+            <div class="grid-two-col">
+                <div>
+                    <h2 class="section-title">代表性学术著作与论文</h2>
+                    <ul class="list-items">
+                        <li>
+                            <span class="pub-title">《智慧数据驱动的文化遗产重构与知识图谱化研究》</span>
+                            <span class="pub-meta">人民出版社, 2022年版. (入选国家哲学社会科学成果文库)</span>
+                        </li>
+                        <li>
+                            <span class="pub-title">"Towards semantic interoperability of cross-border minority cultural heritage: A deep-learning approach"</span>
+                            <span class="pub-meta">Journal of the Association for Information Science and Technology (JASIST), 2023, 74(4). (领域Top期刊)</span>
+                        </li>
+                        <li>
+                            <span class="pub-title">"A Knowledge Graph Framework for Multi-lingual Archives along the Silk Road"</span>
+                            <span class="pub-meta">International Journal of Geographical Information Science, 2021, 35(8). (SSCI/SCI双检索)</span>
+                        </li>
+                        <li>
+                            <span class="pub-title">《大数据时代跨境民族档案资源的智慧融合与治理范式研究》</span>
+                            <span class="pub-meta">《中国图书馆学报》, 2020年第3期. (权威期刊首篇知网破万引用)</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="section-title">主持重要科研项目</h2>
+                    <ul class="list-items">
+                        <li>
+                            <span class="pub-title">国家社科基金重大项目 (项目编号: 22&ZD341)</span>
+                            <span class="pub-meta">“面向人类命运共同体的西南跨境多语种数字资源安全保障与智慧共享研究” (在研，资助经费80万)</span>
+                        </li>
+                        <li>
+                            <span class="pub-title">国家自然科学基金重点项目 (项目编号: 72034005)</span>
+                            <span class="pub-meta">“基于大模型演进的非结构化民族文化大数据语义挖掘与形态重塑” (在研，资助经费210万)</span>
+                        </li>
+                        <li>
+                            <span class="pub-title">国家社科基金重大项目 (项目编号: 16ZDB128)</span>
+                            <span class="pub-meta">“南亚东南亚历史档案文献整理与跨语种数据库建设” (已结项，获评优秀成果)</span>
+                        </li>
+                        <li>
+                            <span class="pub-title">联合国教科文组织 (UNESCO) 国际合作项目</span>
+                            <span class="pub-meta">“Digital Preservation of Endangered Cultural Heritage in Mekong River Basin” (已顺利结项)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="section-title">联系与合作</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info-block">
+                    <div class="info-item">
+                        <span class="label">办公地址</span>
+                        <span class="value">云南大学呈贡校区历史与档案学院大楼 405 室</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">电子邮箱</span>
+                        <span class="value">shirl_ynu@ynu.edu.cn</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">研究组主页</span>
+                        <span class="value">irm.ynu.edu.cn/shirl_lab</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">招生要求</span>
+                        <span class="value">热忱欢迎具备信息资源管理、计算机科学或小语种背景的推免生及博士生报考！</span>
+                    </div>
+                </div>
+                <div class="message-form">
+                    <h3>给施教授留言</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="您的姓名 / 机构" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="您的电子邮箱" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="4" placeholder="请阐明您的合作意向或学术咨询内容..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">发送邮件</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 云南大学历史与档案学院 信息资源管理系 版权所有</p>
+        <p>地址：云南省昆明市呈贡区大学城外环南路 云南大学呈贡校区 | 邮编：650500</p>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Sticky Navbar Active Highlight on Link Click
+        const links = document.querySelectorAll('.nav-links a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                links.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+
+        // Simple Form Submission Feedback
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('感谢您的留言！施汝林教授学术团队秘书会尽快给您回复。');
+            form.reset();
+        });
+    </script>
+</body>
+</html>
